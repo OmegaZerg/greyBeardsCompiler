@@ -20,6 +20,12 @@ What exactly is GreyBeard's compiler? Well, even I dont know the full answer to 
     - Additionally if historical logs are kept, when do we auto clear previous logs? 30 days? Check for logs older than x days and delete first before writing more logs?
 7. More stuff that im sure im forgetting...
 
+##### Nice to have feature possibilities:
+- A navigation system
+- Support for multiple pages
+- Handling of blog posts
+- Custom layouts for different types of content
+
 ##### Project Goals (subject to change over time)
 ###### Get better with:
 - The C programming language
@@ -27,6 +33,6 @@ What exactly is GreyBeard's compiler? Well, even I dont know the full answer to 
 - String manipulation
 - Pointers
 - Structs
-- Unit Testing
+- Testing
 - And...More?
 
