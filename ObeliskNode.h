@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #pragma once
 
 typedef enum {
@@ -8,3 +9,13 @@ typedef enum {
     UNORDERED_LIST,
     ORDERED_LIST,
 } blockType_t;
+
+typedef struct {
+    blockType_t textType;
+    char *contents;
+    char *url;
+} textNode_t;
+
+textNode_t *createTextNode(blockType_t textType, char *text, char *url);
+
+bool textNodeCompare(textNode_t *node1, textNode_t *node2);

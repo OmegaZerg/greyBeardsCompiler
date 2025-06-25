@@ -2,6 +2,15 @@
 What exactly is GreyBeard's compiler? Well, even I dont know the full answer to that question yet. What I know for certain is this will be a C Language focused program, that will present a UI to the end user. In this UI, the user will be able to select a markdown file and have the program generate a HTML file from that and place it into a directory chosen by the user in the UI. More features and functionality may be added as I work through this build.
 
 #### This is currently a work in progress
+
+#### ||Current tasks in progress||
+**textnode object:**
+1. Struct with text, text type, and url
+2. Function to create textNode object
+3. Function that can compare 2 textnode objects for equality (all 3 fields must equal)
+4. Function to return the string representation of a textnode object. Example: return f"TextNode({self.text}, {self.text_type.value}, {self.url})"
+5. Function that returns the html data member of an object. Not sure this would be needed?
+
 ##### To Do list:
 1. Create a very simple UI
     - Destination Selection (drop down??)
@@ -23,7 +32,7 @@ What exactly is GreyBeard's compiler? Well, even I dont know the full answer to 
 ##### Nice to have feature possibilities:
 - A navigation system
 - Support for multiple pages
-- Handling of blog posts
+- Handling of blog posts and/or edits to existing html documents
 - Custom layouts for different types of content
 
 ##### Project Goals (subject to change over time)
