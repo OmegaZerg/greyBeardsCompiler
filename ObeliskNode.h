@@ -18,4 +18,6 @@ typedef struct {
 
 textNode_t *createTextNode(blockType_t textType, char *text, char *url);
 
+void summonTextNode(textNode_t *node);
+
 bool textNodeCompare(textNode_t *node1, textNode_t *node2);

@@ -8,7 +8,7 @@ What exactly is GreyBeard's compiler? Well, even I dont know the full answer to 
 1. Struct with text, text type, and url
 2. Function to create textNode object
 3. Function that can compare 2 textnode objects for equality (all 3 fields must equal)
-4. Function to return the string representation of a textnode object. Example: return f"TextNode({self.text}, {self.text_type.value}, {self.url})"
+4. Function to print the string representation of a textnode object. Example: return f"TextNode({self.text}, {self.text_type.value}, {self.url})"
 5. Function that returns the html data member of an object. Not sure this would be needed?
 
 ##### To Do list:

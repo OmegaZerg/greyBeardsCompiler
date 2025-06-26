@@ -14,5 +14,11 @@ int main() {
     printf("Hello, World!\n");
     textNode_t *newNode = createTextNode(PARAGRAPH, testText, testURL);
     printf("New Node text: %s\n", newNode->contents);
+    if (*newNode->url == '\0') {
+        printf("New Node url: None\n");
+    }
+
+    summonTextNode(newNode);
+
     return 0;
 }
