@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**************Text Node Block**************/
 textNode_t *createTextNode(blockType_t textType, char *text, char *url) {
     // malloc stuff here?? Preferrable instead of on function call
     // textNode_t node = {.textType, .text, .url};
@@ -54,3 +55,12 @@ bool textNodeCompare(textNode_t *node1, textNode_t *node2) {
         return false;
     }
 }
+/**************End Block**************/
+
+/**************Leaf Node Block**************/
+
+/**************End Block**************/
+
+/**************Parent Node Block**************/
+
+/**************End Block**************/

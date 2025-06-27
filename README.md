@@ -5,12 +5,25 @@ What exactly is GreyBeard's compiler? Well, even I dont know the full answer to 
 
 #### ||Current tasks in progress||
 **textnode object:**
-1. Struct with text, text type, and url
+1. Struct with contents, text type, and url
 2. Function to create textNode object
 3. Function that can compare 2 textnode objects for equality (all 3 fields must equal)
 4. Function to print the string representation of a textnode object. Example: return f"TextNode({self.text}, {self.text_type.value}, {self.url})"
-5. Function that returns the html data member of an object. Not sure this would be needed?
+5. Function that returns the html data member(contents) of an object. Not sure this would be needed?
 
+**leafnode object:**
+1. Struct with tag, contents, children, props
+2. Function to create leafNode object
+3. Function that can compare 2 leafNode objects for equality
+4. Function to print the string representation of a leafNode object
+5. Function that returns the html data member(contents) of an object - should be needed on leafnodes and parentnodes
+6. Function that returns the html data member(props) of an object - should be needed on leafnodes and parentnodes
+7. Require checks in place to ensure data integrity on these nodes, need to make sure required data is not missing or if it is what to do to handle that.
+**Hashmap implementation required**
+1. Implement hashmaps
+2. Lots more stuff here
+
+#### ||High Level Project Overview||
 ##### To Do list:
 1. Create a very simple UI
     - Destination Selection (drop down??)
@@ -27,7 +40,11 @@ What exactly is GreyBeard's compiler? Well, even I dont know the full answer to 
 6. Add a logger and logs to write out events to a log file.
     - Need to decide if logger should store historical logs or if previous logs are overritten when a new compile happens.
     - Additionally if historical logs are kept, when do we auto clear previous logs? 30 days? Check for logs older than x days and delete first before writing more logs?
-7. More stuff that im sure im forgetting...
+7. Implement hashmaps for TomeLoader
+8. Implement textNodes
+9. Implement leafNodes
+10. Implement parentNodes
+11. More stuff that im sure im forgetting...
 
 ##### Nice to have feature possibilities:
 - A navigation system
