@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ObeliskNode.h"
+#include "test.h"
 
 
 int main() {
@@ -11,14 +12,11 @@ int main() {
     char *testText = "test text here";
     char *testURL = "\0"; //represents a null entry since c funcations do not allow for default parameters.
 
-    printf("Hello, World!\n");
-    textNode_t *newNode = createTextNode(PARAGRAPH, testText, testURL);
-    printf("New Node text: %s\n", newNode->contents);
-    if (*newNode->url == '\0') {
-        printf("New Node url: None\n");
-    }
+    printf("Hello, World from TomeLoader!\n");
+    textNode_t *newNode1 = createTextNode(PARAGRAPH, testText, testURL);
+    textNode_t *newNode2 = createTextNode(QUOTE, testText, testURL);
 
-    summonTextNode(newNode);
+    testTextNode(newNode1, newNode2);
 
     return 0;
 }

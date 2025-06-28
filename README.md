@@ -19,6 +19,12 @@ What exactly is GreyBeard's compiler? Well, even I dont know the full answer to 
 5. Function that returns the html data member(contents) of an object - should be needed on leafnodes and parentnodes
 6. Function that returns the html data member(props) of an object - should be needed on leafnodes and parentnodes
 7. Require checks in place to ensure data integrity on these nodes, need to make sure required data is not missing or if it is what to do to handle that.
+
+**test suite for all objects**
+1. Separate test file(s) where tests for each object can be defined.
+2. Call tests from TomeLoader main function.
+3. Implement unit tests as needed.
+
 **Hashmap implementation required**
 1. Implement hashmaps
 2. Lots more stuff here
@@ -44,6 +50,8 @@ What exactly is GreyBeard's compiler? Well, even I dont know the full answer to 
 8. Implement textNodes
 9. Implement leafNodes
 10. Implement parentNodes
+11. Implement test suite - note sure if this will be UI based or not yet. Needs to test each section.
+12. Implement 'spellbook' for helper functions
 11. More stuff that im sure im forgetting...
 
 ##### Nice to have feature possibilities:
