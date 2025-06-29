@@ -21,6 +21,7 @@ hashMap_t *createHashMap() {
     for (int i = 0; i < TABLE_SIZE; i++) {
         map->table[i] = NULL;
     }
+    map->length = 0;
     return map;
 }
 
@@ -35,15 +36,38 @@ int insert(hashMap_t *map, char *key, char *value) {
     newKvPair->key = strdup(key);
     newKvPair->value = strdup(value);
     newKvPair->next = map->table[index];
+    map->length++;
     //Possibly implement checks to ensure values written correctly?
+    printf("Checking Key: %s\nChecking Value: %s\nLength: %d\n", newKvPair->key, newKvPair->value, map->length);
+
     puts("New Key/Value pair added to hashmap.");
     return 0;
 }
 
+// char *getValue(hashMap_t *map, char *key) {
+//     unsigned int index = hash(key);
+//     keyValue_t *pair = map->table[index];
+//     //printf("index: %d\nmap->table: %s", index, pair->key);
+//     puts("THis is inside the getValue function.");
+//     while (pair) {
+//         printf("KV Pair Key: %s", pair->key);
+//         if (strcmp(pair->key, key) == 0) {
+//             return pair->value;
+//         }
+//         pair = pair->next;
+//     }
+//     puts("Key Not Found!");
+//     return NULL;
+// }
+
 char *getValue(hashMap_t *map, char *key) {
     unsigned int index = hash(key);
     keyValue_t *pair = map->table[index];
-    while (pair) {
+    //printf("index: %d\nmap->table: %s", index, pair->key);
+    puts("THis is inside the getValue function.");
+    for (int i = 0; i < map->length; i++) {
+    // while (pair) {
+        printf("KV Pair Key: %s", pair->key);
         if (strcmp(pair->key, key) == 0) {
             return pair->value;
         }

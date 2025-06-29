@@ -37,6 +37,7 @@ int main() {
     hashMap_t *hashMapProps = createHashMap();
 
     //Insert KY pairs:
+    //sizeof(keys) / sizeof(keys[0]) only works for arrays, so it works here but best case is to just track size of your arrays
     for (int i = 0; i < sizeof(keys) / sizeof(keys[0]); i++) {
         printf("The size of keys is: %ld\n", sizeof(keys));
         int success = insert(hashMapProps, keys[i], values[i]);
@@ -44,8 +45,8 @@ int main() {
             printf("Key {%s} and Value {%s} inserted into hashmap successfully!\n", keys[i], values[i]);
         }
     }
-    
-    testHashMap(hashMapProps);
+    char *testKey = "style";
+    testHashMap(hashMapProps, testKey);
 
     return 0;
 }

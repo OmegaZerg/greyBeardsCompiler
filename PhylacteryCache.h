@@ -13,6 +13,7 @@ typedef struct keyValue{
 //Table size is a global constant 100 for now. Future improvment will likely see this changed to be a variable stored inside hashMap_t itself, that can be dynamically increased as the hashmap fills, and decreased and the hashmap empties.
 typedef struct {
     keyValue_t *table[TABLE_SIZE];
+    int length;
 } hashMap_t;
 
 unsigned int hash(char *key);
