@@ -58,7 +58,7 @@ int textNodeCompare(textNode_t *node1, textNode_t *node2) {
 /**************End Block**************/
 
 /**************Leaf Node Block**************/
-leafNode_t *createLeafNode(char *tag, char *contents, void *children, void *props) {
+leafNode_t *createLeafNode(char *tag, char *contents, void *children, void *properties) {
     leafNode_t *newNode = malloc(sizeof(leafNode_t));
     if (newNode == NULL){
         printf("Unable to allocate memory for leafNode! Summon Failed!\n");
@@ -67,16 +67,16 @@ leafNode_t *createLeafNode(char *tag, char *contents, void *children, void *prop
     newNode->tag = tag;
     newNode->contents = contents;
     newNode->children = children;
-    newNode->props = props;
+    newNode->properties = properties;
     return newNode;
 }
 //still need to implement this
-void printLeaftNode(leafNode_t *node) {
-    return;
-}
+// void printLeafNode(leafNode_t *node) {
+//     return;
+// }
 
 int leafNodeCompare(leafNode_t *node1, leafNode_t *node2) {
-    if (node1->tag == node2->tag && node1->contents == node2->contents && node1->props == node2->props) {
+    if (node1->tag == node2->tag && node1->contents == node2->contents && node1->properties == node2->properties) {
         return 1;
     } else {
         return 0;

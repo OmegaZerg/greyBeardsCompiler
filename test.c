@@ -1,7 +1,7 @@
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "ObeliskNode.h"
+#include "PhylacteryCache.h"
 
 void testTextNode(textNode_t *node1, textNode_t *node2) {
     puts("\nTesting manual printing of textnode:");
@@ -15,4 +15,8 @@ void testTextNode(textNode_t *node1, textNode_t *node2) {
     puts("\nTesting function compare of textnode via 'textNodeCompare':");
     puts("The following should evaluate to false (0), as the input nodes have different text types:");
     printf("test: %d\n", textNodeCompare(node1, node2));
+}
+
+void testHashMap(hashMap_t *hashmap) {
+    puts("Hello from inside of test hashmap!");
 }

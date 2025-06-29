@@ -20,7 +20,7 @@ typedef struct {
     char *tag;  //html tag
     char *contents;  //Plain text?
     void *children;  //array of pointers to leafNodes
-    void *props;  //hashmap of K/V pairs representing the attributes for an HTML tag of this instance. Not a required field. Example: a link <a> tag might have {"href": "https://.google.com"}
+    void *properties;  //hashmap of K/V pairs representing the attributes for an HTML tag of this instance. Not a required field. Example: a link <a> tag might have {"href": "https://.google.com"}
 } leafNode_t;
 
 textNode_t *createTextNode(blockType_t textType, char *contents, char *url);
@@ -32,6 +32,6 @@ int textNodeCompare(textNode_t *node1, textNode_t *node2);
 
 leafNode_t *createLeafNode(char *tag, char *contents, void *children, void *props);
 
-void printLeaftNode(leafNode_t *node)
+void printLeafNode(leafNode_t *node);
 
 int leafNodeCompare(leafNode_t *node1, leafNode_t *node2);
